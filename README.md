@@ -147,17 +147,6 @@
     </div>
   </section>
 
-  <section id="kontak" class="kontak">
-    <h2 class="section-title">Kontak Kami</h2>
-    <p class="section-sub">Ingin bergabung atau mengundang kami tampil? Hubungi kami!</p>
-    <form class="kontak-form" onsubmit="return kirimPesan(event)">
-      <input type="text" id="nama" placeholder="Nama" required>
-      <input type="email" id="email" placeholder="Email" required>
-      <textarea id="pesan" placeholder="Pesan" required></textarea>
-      <button type="submit">Kirim Pesan</button>
-    </form>
-  </section>
-
   <footer>
     <p>© 2025 SASTIK - Sanggar Seni Tiga Kendari. Semua Hak Dilindungi.</p>
   </footer>
