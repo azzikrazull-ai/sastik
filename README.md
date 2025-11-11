@@ -192,41 +192,128 @@
       </div>
       <div class="tarian-card">
         <img src="IMG-tameng.jpg" alt="Tari Amoara" class="animate">
-        <h3>Tari Amoara</h3>
-        <p>Tarian kebanggaan SASTIK yang memadukan energi muda dan tradisi daerah dengan gaya elegan.</p>
-      </div>
-      <div class="tarian-card">
-        <img src="IMG-toraja.jpg" alt="Tari 4 etnis" class="animate">
-        <h3>Tari 4 etnis</h3>
-        <p>Tari 4 Etnis adalah tarian kreasi yang berasal dari Sulawesi Selatan yang memadukan unsur-unsur dari empat etnis terbesar di wilayah tersebut: Bugis, Makassar, Mandar, dan Toraja..</p>
-      </div>
-    </div>
-  </section>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Halaman Web Gabungan</title>
   
-  <section id="galeri" class="galeri">
-    <h2 class="section-title">Galeri</h2>
-    <p class="section-sub">Potret kebersamaan dan penampilan kami</p>
-    <div class="galeri-grid">
-      <img src="IMG-ulta.jpg" alt="Penampilan tari" class="animate">
-      <img src="IMG-toraja.jpg" alt="Latihan tari" class="animate">
-      <img src="IMG-satu.jpg" alt="Kostum tari" class="animate">
-      <img src="IMG-tiga.jpg" alt="Pertunjukan panggung" class="animate">
-    </div>
-  </section>
-
-  <footer>
-    <p>© 2025 SASTIK - Sanggar Seni Tiga Kendari. Semua Hak Dilindungi.</p>
-  </footer>
-
-  <script>
-    function kirimPesan(e){
-      e.preventDefault();
-      const nama=document.getElementById('nama').value;
-      alert('Terima kasih '+nama+'! Pesan kamu sudah terkirim ke SASTIK.');
-      e.target.reset();
+  <style>
+    /* Gaya Wrapper Carousel */
+    .carousel-wrapper {
+        position: relative;
+        max-width: 1000px; /* Atur lebar maksimal */
+        margin: 40px auto;
+        overflow: hidden; /* Penting untuk menyembunyikan slide yang tidak aktif */
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     }
 
-    // 🔸 Efek animasi saat discroll
+    /* Sembunyikan Input Radio */
+    .carousel-wrapper input[type="radio"] {
+        display: none;
+    }
+
+    /* Kontainer yang akan bergeser */
+    .carousel-container {
+        display: flex; /* Membuat slide berbaris horizontal */
+        width: 300%; /* Sesuaikan dengan jumlah slide */
+        transition: transform 0.6s ease-in-out; /* Animasi pergeseran */
+    }
+
+    /* Gaya per Slide */
+    .slide {
+        width: 33.33%; /* 100% / 3 slide */
+        height: 400px;
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Caption Teks */
+    .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Logic Pergeseran Slide (INTI) */
+    #slide-2:checked ~ .carousel-container {
+        transform: translateX(-33.33%);
+    }
+
+    #slide-3:checked ~ .carousel-container {
+        transform: translateX(-66.66%);
+    }
+
+    /* Gaya Navigasi Dots */
+    .navigation-dots {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 10px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 12px;
+        width: 12px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    /* Gaya Dot yang Aktif */
+    #slide-1:checked ~ .navigation-dots .dot:nth-child(1),
+    #slide-2:checked ~ .navigation-dots .dot:nth-child(2),
+    #slide-3:checked ~ .navigation-dots .dot:nth-child(3) {
+        background-color: #fff;
+        border: 2px solid #333;
+    }
+  </style>
+  
+  </head>
+<body>
+  
+  <div class="carousel-wrapper">
+      <input type="radio" name="slider" id="slide-1" checked>
+      <input type="radio" name="slider" id="slide-2">
+      <input type="radio" name="slider" id="slide-3">
+
+      <div class="carousel-container">
+          <div class="slide" id="s1">
+              <img src="https://picsum.photos/id/100/1000/600" alt="Slide 1 - Hutan">
+              <div class="caption">SPEED IN SILENCE</div>
+          </div>
+          <div class="slide" id="s2">
+              <img src="https://picsum.photos/id/101/1000/600" alt="Slide 2 - Pegunungan">
+              <div class="caption">EXPLORE THE WILD</div>
+          </div>
+          <div class="slide" id="s3">
+              <img src="https://picsum.photos/id/104/1000/600" alt="Slide 3 - Gurun">
+              <div class="caption">RULE WITH COURAGE</div>
+          </div>
+      </div>
+      
+      <div class="navigation-dots">
+          <label for="slide-1" class="dot"></label>
+          <label for="slide-2" class="dot"></label>
+          <label for="slide-3" class="dot"></label>
+      </div>
+  </div>
+  <script>
+    // 🔸 Contoh fungsi-fungsi JavaScript Anda (seperti contactForm yang disebutkan)
     const animElements = document.querySelectorAll('img.animate');
     function animOnScroll(){
       animElements.forEach(el=>{
