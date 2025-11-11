@@ -27,36 +27,27 @@
     .hero-text p{max-width:550px;line-height:1.7;color:#fce8e8;}
     .hero-img{flex:1;min-width:300px;text-align:center;}
     .hero-img img{width:100%;max-width:400px;border-radius:12px;box-shadow:0 0 20px rgba(255,215,0,0.5);animation:float 4s ease-in-out infinite;}
-
     section{padding:3rem 2rem;}
     h2.section-title{text-align:center;color:var(--emas);margin-bottom:1rem;font-size:1.8rem;}
     p.section-sub{text-align:center;margin-bottom:2rem;color:#f8dcdc;}
-
     .profil,.tarian,.galeri,.kontak{max-width:1100px;margin:auto;}
-
     .profil-content{display:flex;flex-wrap:wrap;align-items:center;gap:2rem;}
     .profil-content img{width:100%;max-width:400px;border-radius:12px;box-shadow:0 0 15px rgba(255,255,255,0.2)}
     .profil-content div{flex:1;}
-
     .tarian-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
     .tarian-card{background:rgba(255,255,255,0.05);border-radius:12px;padding:1rem;text-align:center;transition:transform 0.3s;}
     .tarian-card:hover{transform:scale(1.05);}
     .tarian-card img{width:100%;border-radius:10px;margin-bottom:.5rem;}
-
     .galeri-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem;}
     .galeri-grid img{width:100%;border-radius:10px;transition:transform 0.3s,box-shadow 0.3s;}
     .galeri-grid img:hover{transform:scale(1.05);box-shadow:0 0 15px var(--emas);}
-
     .kontak-form{display:flex;flex-direction:column;gap:1rem;max-width:600px;margin:auto;}
     input,textarea{padding:.8rem;border:none;border-radius:8px;background:rgba(255,255,255,0.1);color:var(--putih);}
     button{padding:.8rem 1.5rem;background:var(--emas);color:var(--hitam);border:none;border-radius:8px;font-weight:600;cursor:pointer;transition:0.3s;}
     button:hover{background:var(--merah-cerah);color:var(--putih);}
-
     footer{text-align:center;padding:1.5rem;background:rgba(0,0,0,0.8);color:#ddd;margin-top:2rem;font-size:.9rem;}
-
     @keyframes fadeIn{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
     @keyframes float{0%{transform:translateY(0);}50%{transform:translateY(-10px);}100%{transform:translateY(0);}}
-
     /* 🎭 ANIMASI TAMBAHAN UNTUK GAMBAR */
     @keyframes fadeInUp {
       from {opacity: 0; transform: translateY(30px);}
@@ -76,7 +67,7 @@
       transform: scale(1.07);
       box-shadow: 0 0 20px gold;
     }
-/* Gaya Wrapper Carousel */
+    
 .carousel-wrapper {
     position: relative;
     max-width: 1000px; /* Atur lebar maksimal */
@@ -174,7 +165,6 @@
         <li><a href="#profil">Profil</a></li>
         <li><a href="#tarian">Tarian</a></li>
         <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#kontak">Kontak</a></li>
       </ul>
     </nav>
   </header>
