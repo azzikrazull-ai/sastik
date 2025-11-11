@@ -66,8 +66,7 @@
     img:hover {
       transform: scale(1.07);
       box-shadow: 0 0 20px gold;
-    }
-    
+    }  
 .carousel-wrapper {
     position: relative;
     max-width: 1000px; /* Atur lebar maksimal */
@@ -76,33 +75,28 @@
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-
 /* Sembunyikan Input Radio */
 .carousel-wrapper input[type="radio"] {
     display: none;
 }
-
 /* Kontainer yang akan bergeser */
 .carousel-container {
     display: flex; /* Membuat slide berbaris horizontal */
     width: 300%; /* 3 slide * 100% = 300% */
     transition: transform 0.6s ease-in-out; /* Animasi pergeseran */
 }
-
 /* Gaya per Slide */
 .slide {
     width: 33.33%; /* 100% / 3 slide */
     height: 400px;
     position: relative;
 }
-
 .slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
 }
-
 /* Caption Teks */
 .caption {
     position: absolute;
@@ -113,18 +107,15 @@
     font-weight: bold;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
-
 /* Logic Pergeseran Slide (INTI) */
 /* Ketika slide-2 aktif, geser kontainer ke kiri 33.33% */
 #slide-2:checked ~ .carousel-container {
     transform: translateX(-33.33%);
 }
-
 /* Ketika slide-3 aktif, geser kontainer ke kiri 66.66% */
 #slide-3:checked ~ .carousel-container {
     transform: translateX(-66.66%);
 }
-
 /* Gaya Navigasi Dots */
 .navigation-dots {
     position: absolute;
@@ -134,7 +125,6 @@
     display: flex;
     gap: 10px;
 }
-
 .dot {
     cursor: pointer;
     height: 12px;
@@ -144,7 +134,6 @@
     display: block;
     transition: background-color 0.3s;
 }
-
 /* Gaya Dot yang Aktif */
 #slide-1:checked ~ .navigation-dots .dot:nth-child(1),
 #slide-2:checked ~ .navigation-dots .dot:nth-child(2),
@@ -168,7 +157,7 @@
       </ul>
     </nav>
   </header>
-
+  
   <section id="beranda" class="hero">
     <div class="hero-text">
       <h2>Sanggar Seni Tiga Kendari (SASTIK)</h2>
